@@ -30,8 +30,8 @@ class PRTGServer:
     def populate_devices(self, group_id='0', tag_str=''):
         '''Populates the PRTGServer.devices property with a dictionary of dictionaries containing the devices. 
         Key is the object IDs of the devices.
-        groupID is an optional parameter, when provided it will only populate by that group ID
-        tagStr is an optional parameter, when provided this method will filter objects by PRTG tags.'''
+        group_id is an optional parameter, when provided it will only populate by that group ID
+        tag_str is an optional parameter, when provided this method will filter objects by PRTG tags.'''
         url = self.url + '/api/table.json?content=devices&output=json&count=1000&columns=tags,objid,probe,device,host'
         url += ('&username=' + self.user_name)
         url += ('&passhash=' + self.user_passhash)
@@ -60,7 +60,6 @@ class PRTGObject:
         self.name = name
 
     def start(self):
-
         url = '{}/api/pause.htm?id={}&action=1&username={}&passhash={}'\
             .format(self.server.url,\
             str(self.objid),\
@@ -171,7 +170,7 @@ class PRTGSensor(PRTGObject):
 
     # /api/historicdata.xml?id=6175&avg=0&columns&sdate=2019-12-21-07-19-10&edate=2019-12-21-08-59-10
     def getSingleChanValues(self, chanKey, startTime='none', endTime='none'):
-        '''Takes a list of PRTG sensor values from a single channel and optional start/stop times - these should be datetime.datetime objects. 
+        '''Takes a list of PRTG sensor values (chanKey) from a single channel and optional start/stop times - these should be datetime.datetime objects. 
         Returns a list of dicts containing the channel results. 
         If no start/end times are provided, returns only last good channel reading within 30 minutes prior to runtime.'''
 

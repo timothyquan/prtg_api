@@ -1,0 +1,97 @@
+<mxfile host="65bd71144e">
+    <diagram id="XrayLIx1DLyD0V8yxFFT" name="Page-1">
+        <mxGraphModel dx="1678" dy="930" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="PRTGServer" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="130" width="750" height="162" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="__init__(self, host_add, url, user_name, user_passhash)" style="text;whiteSpace=wrap;html=1;fontFamily=Courier New;fontColor=#FFFFFF;fontStyle=1;fillColor=#878787;" vertex="1" parent="2">
+                    <mxGeometry y="29" width="750" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="populate_devices(group_id, tag_str)" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="2" vertex="1">
+                    <mxGeometry y="59" width="750" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="-Populates the PRTGServer.devices property with a dictionary of dictionaries containing the devices.&amp;nbsp;&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="2" vertex="1">
+                    <mxGeometry y="84" width="750" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;div&gt;-group_id is an optional parameter, when provided it will only populate by that group ID&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="2" vertex="1">
+                    <mxGeometry y="110" width="750" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;div&gt;-&lt;span&gt;tagStr is an optional parameter, when provided this method will filter objects by PRTG tags.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="2" vertex="1">
+                    <mxGeometry y="136" width="750" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;b&gt;PRTGDevice (PRTGObject)&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="570" width="600" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="populateSensors(tag_str)" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;fontStyle=1;labelBackgroundColor=none;" parent="19" vertex="1">
+                    <mxGeometry y="29" width="600" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="- Populates the PRTGDevice.sensors property with a dictionary of dictionaries containing the sensors.&amp;nbsp;Primary index is the object IDs of the sensors.&lt;br&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#878787;" parent="19" vertex="1">
+                    <mxGeometry y="54" width="600" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;span style=&quot;font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; display: inline; float: none;&quot;&gt;-tagStr is an optional parameter, when provided this method will filter sensors by PRTG tags.&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#878787;" vertex="1" parent="19">
+                    <mxGeometry y="110" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="PRTGObject (parent class of PRTGDevice &amp;amp; PRTGSensor)" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="300" width="380" height="234" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;b&gt;start()&lt;br&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="22" vertex="1">
+                    <mxGeometry y="29" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="-starts the object" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="22" vertex="1">
+                    <mxGeometry y="54" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;font&gt;&lt;b&gt;pause()&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="22" vertex="1">
+                    <mxGeometry y="79" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="-pauses the object" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="22" vertex="1">
+                    <mxGeometry y="104" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;font&gt;&lt;b&gt;get_status()&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="22" vertex="1">
+                    <mxGeometry y="129" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="-returns the object status as a string" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="22" vertex="1">
+                    <mxGeometry y="154" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font&gt;&lt;b&gt;get_tags()&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="22" vertex="1">
+                    <mxGeometry y="179" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="-returns the tag of an object" style="text;whiteSpace=wrap;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#878787;" parent="22" vertex="1">
+                    <mxGeometry y="204" width="380" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;b&gt;PRTGSensor (PRTGObject)&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="760" width="600" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="getSingleChanValues(chanKey, startTime, endTime)" style="text;html=1;strokeColor=none;fillColor=#878787;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Courier New;fontColor=#FFFFFF;fontStyle=1;labelBackgroundColor=none;" parent="37" vertex="1">
+                    <mxGeometry y="29" width="600" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="- Takes a list of PRTG sensor values (chanKey) from a single channel and optional start/stop times - these should be datetime.datetime objects. Returns a list of dicts containing the channel results.&amp;nbsp;" style="text;whiteSpace=wrap;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#878787;" parent="37" vertex="1">
+                    <mxGeometry y="54" width="600" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;span style=&quot;font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; display: inline; float: none;&quot;&gt;- If no start/end times are provided, returns only last good channel reading within 30 minutes prior to runtime&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Courier New;fontColor=#FFFFFF;labelBackgroundColor=none;fillColor=#878787;" vertex="1" parent="37">
+                    <mxGeometry y="120" width="600" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" style="edgeStyle=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontFamily=Courier New;fontColor=#FFFFFF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;" parent="1" source="26" target="36" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="120" y="417"/>
+                            <mxPoint x="120" y="500"/>
+                            <mxPoint x="120" y="666"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Courier New;fontColor=#FFFFFF;entryX=1;entryY=0.75;entryDx=0;entryDy=0;labelBackgroundColor=none;" parent="1" source="26" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="800" y="416.66666666666674" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="800" y="417"/>
+                            <mxPoint x="800" y="864"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
